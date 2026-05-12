@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>Portfolio</title>
+
+	<link rel="stylesheet" href="css/bootstrap-grid.css" type="text/css">
+	<link rel="stylesheet" href="css/styles.css" type="text/css">
+
+	<link href="https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@300;400;500;600;700;800;900&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+	margin:0;
+	padding:0;
+	box-sizing:border-box;
+}
+
+html{
+	scroll-behavior:smooth;
+}
+
+body{
+	background:linear-gradient(to bottom,#ffe3ef,#fff7fb);
+	font-family:'Poppins',sans-serif;
+	color:#444;
+	overflow-x:hidden;
+}
+
+/* NAVBAR */
+
+nav{
+	width:100%;
+	padding:25px 60px;
+	position:fixed;
+	top:0;
+	left:0;
+	z-index:1000;
+
+	background:rgba(255,255,255,0.35);
+	backdrop-filter:blur(14px);
+
+	box-shadow:0 5px 25px rgba(0,0,0,0.05);
+}
+
+nav ul{
+	list-style:none;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	gap:40px;
+}
+
+nav ul li{
+	font-size:13px;
+	letter-spacing:2px;
+	text-transform:uppercase;
+	font-weight:500;
+}
+
+nav ul li a{
+	text-decoration:none;
+	color:#555;
+	transition:0.4s;
+}
+
+nav ul li a:hover{
+	color:#ff4fa0;
+}
+
+/* HEADER */
+
+header{
+	padding:170px 90px 120px;
+	position:relative;
+}
+
+header::before{
+	content:"";
+	position:absolute;
+	width:400px;
+	height:400px;
+	background:#ffd0e6;
+	border-radius:50%;
+	top:-100px;
+	right:-100px;
+	filter:blur(90px);
+	z-index:-1;
+}
+
+header::after{
+	content:"";
+	position:absolute;
+	width:300px;
+	height:300px;
+	background:#ffc2dd;
+	border-radius:50%;
+	bottom:0;
+	left:-80px;
+	filter:blur(90px);
+	z-index:-1;
+}
+
+.row{
+	display:flex;
+	align-items:center;
+	justify-content:space-between;
+	gap:80px;
+	flex-wrap:wrap;
+}
+
+.col-sm{
+	flex:1;
+	min-width:300px;
+}
+
+/* TYPOGRAPHY */
+
+h1{
+	font-family:'Inknut Antiqua',serif;
+	font-size:70px;
+	line-height:1.2;
+	color:#222;
+	margin-bottom:25px;
+}
+
+h2{
+	font-family:'Inknut Antiqua',serif;
+	font-size:42px;
+	line-height:1.4;
+	margin-bottom:25px;
+	color:#222;
+}
+
+p{
+	font-size:17px;
+	line-height:2;
+	color:#666;
+}
+
+/* INTRO TEXT */
+
+.profile-list{
+	list-style:none;
+	margin-top:20px;
+}
+
+.profile-list li{
+	margin-bottom:14px;
+	font-size:16px;
+	color:#666;
+}
+
+/* IMAGES */
+
+.intro-image{
+	width:100%;
+	max-width:430px;
+	border-radius:35px;
+	display:block;
+	margin:auto;
+
+	box-shadow:
+	0 15px 40px rgba(0,0,0,0.12);
+
+	transition:0.5s;
+}
+
+.intro-image:hover{
+	transform:scale(1.03) rotate(1deg);
+}
+
+.project img{
+	width:100%;
+	max-width:430px;
+	border-radius:30px;
+	display:block;
+	margin:auto;
+
+	box-shadow:
+	0 15px 35px rgba(0,0,0,0.1);
+
+	transition:0.5s;
+}
+
+.project img:hover{
+	transform:translateY(-10px);
+}
+
+figcaption{
+	margin-top:15px;
+	font-size:13px;
+	color:#999;
+	font-style:italic;
+}
+
+.right-alignment{
+	text-align:right;
+}
+
+/* SKILL */
+
+.skill-list{
+	display:flex;
+	justify-content:center;
+	flex-wrap:wrap;
+	gap:20px;
+	list-style:none;
+	padding:20px 40px 90px;
+}
+
+.skill-list li{
+	background:rgba(255,255,255,0.7);
+	backdrop-filter:blur(10px);
+
+	padding:15px 28px;
+
+	border-radius:50px;
+
+	font-size:14px;
+
+	box-shadow:
+	0 8px 20px rgba(0,0,0,0.06);
+
+	transition:0.4s;
+}
+
+.skill-list li:hover{
+	transform:translateY(-6px);
+	background:#ff4fa0;
+	color:white;
+}
+
+/* PROJECT SECTION */
+
+.project{
+	padding:100px 90px;
+	position:relative;
+}
+
+.project::before{
+	content:"";
+	position:absolute;
+	width:250px;
+	height:250px;
+	background:#ffe0ef;
+	border-radius:50%;
+	filter:blur(70px);
+	z-index:-1;
+}
+
+.blue{
+	background:rgba(255,240,247,0.7);
+	backdrop-filter:blur(10px);
+}
+
+.project p{
+	margin-bottom:28px;
+}
+
+/* BUTTON */
+
+.button{
+	display:inline-block;
+
+	padding:15px 38px;
+
+	background:linear-gradient(
+		to right,
+		#ff4fa0,
+		#ff82bf
+	);
+
+	color:white;
+
+	text-decoration:none;
+
+	border-radius:50px;
+
+	font-size:14px;
+	letter-spacing:1px;
+	font-weight:500;
+
+	box-shadow:
+	0 8px 25px rgba(255,79,160,0.3);
+
+	transition:0.4s;
+}
+
+.button:hover{
+	transform:translateY(-5px);
+	background:#222;
+	box-shadow:
+	0 15px 30px rgba(255,79,160,0.4);
+}
+
+/* FOOTER */
+
+footer{
+	text-align:center;
+	padding:100px 20px;
+	background:linear-gradient(to right,#ffc7e1,#ffdceb);
+	margin-top:40px;
+}
+
+footer h2{
+	font-size:45px;
+	line-height:1.6;
+}
+
+footer a{
+	color:#ff4fa0;
+	text-decoration:none;
+	font-weight:600;
+	font-size:18px;
+}
+
+footer p{
+	margin-top:25px;
+	font-size:15px;
+	color:#666;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+
+	nav{
+		padding:20px;
+	}
+
+	nav ul{
+		flex-wrap:wrap;
+		gap:18px;
+	}
+
+	header,
+	.project{
+		padding:120px 25px 70px;
+	}
+
+	h1{
+		font-size:42px;
+		text-align:center;
+	}
+
+	h2{
+		font-size:30px;
+		text-align:center;
+	}
+
+	p{
+		text-align:center;
+		font-size:15px;
+	}
+
+	.profile-list li{
+		text-align:center;
+		font-size:15px;
+	}
+
+	.button{
+		display:block;
+		width:max-content;
+		margin:auto;
+	}
+
+	.right-alignment{
+		text-align:center;
+	}
+
+	figcaption{
+		text-align:center;
+	}
+
+	.skill-list{
+		padding:20px;
+	}
+
+	footer h2{
+		font-size:30px;
+	}
+
+}
+
+</style>
+</head>
+
+<body>
+
+	<nav>
+		<ul>
+			<li><a href="#contact">contact</a></li>
+			<li><a href="#">works</a></li>
+			<li><a href="#">experience</a></li>
+			<li><strong><a href="index.html">home</a></strong></li>
+			<li><a href="profil.html">profil</a></li>
+			<li><a href="https://www.instagram.com/povbysa.a/" target="_blank">instagram</a></li>
+			<li><a href="#">linkedin</a></li>
+		</ul>
+	</nav>
+
+	<header>
+
+		<div class="container">
+			<div class="row">
+
+				<div class="col-sm">
+
+					<h1>
+						hi, i’m <br>
+						Salsabilla Audina
+					</h1>
+
+					<ul class="profile-list">
+						<li>♡ Mahasiswa Informatika</li>
+						<li>♡ Sedang belajar Web Development</li>
+						<li>♡ Membuat desain website modern & aesthetic</li>
+						<li>♡ Menyukai dunia desain dan teknologi</li>
+						<li>♡ Belajar HTML, CSS, JavaScript, dan Flutter</li>
+					</ul>
+
+					<br>
+
+					<a href="#" class="button">
+						add me on linkedin
+					</a>
+
+				</div>
+
+				<div class="col-sm">
+
+					<figure>
+						<img src="image/dinaa.png" class="intro-image" alt="profile">
+						<figcaption>
+							Photo by team on anzistudio room
+						</figcaption>
+					</figure>
+
+				</div>
+
+			</div>
+		</div>
+
+	</header>
+
+	<section>
+
+		<ul class="skill-list">
+			<li>01_homemade cooking</li>
+			<li>02_creative design lover</li>
+			<li>03_soft aesthetic creator</li>
+			<li>04_money motivated girl</li>
+			<li>05_small business ideas</li>
+		</ul>
+
+	</section>
+
+	<!-- PROJECT 1 -->
+
+	<section class="project blue">
+
+		<div class="container">
+			<div class="row">
+
+				<div class="col-sm">
+
+					<figure>
+						<img src="image/familyy.png" alt="family">
+						<figcaption class="right-alignment">
+							Photo by José Alejandro Cuffia on Unsplash
+						</figcaption>
+					</figure>
+
+				</div>
+
+				<div class="col-sm">
+
+					<h2>
+						family story <br>
+						and memories
+					</h2>
+
+					<p>
+						Keluarga adalah tempat di mana cinta tumbuh dengan tulus
+						dan menjadi bukti kasih sayang yang nyata.
+					</p>
+
+					<a href="detail1.html" class="button">
+						Read More
+					</a>
+
+				</div>
+
+			</div>
+		</div>
+
+	</section>
+
+	<!-- PROJECT 2 -->
+
+	<section class="project">
+
+		<div class="container">
+			<div class="row">
+
+				<div class="col-sm right-alignment">
+
+					<h2>
+						four friends <br>
+						one long story
+					</h2>
+
+					<p>
+						Sebuah pertemanan yang dimulai sejak masa SMA
+						dan menjadi semakin dekat ketika menjalani
+						dunia perkuliahan bersama.
+					</p>
+
+					<a href="detail2.html" class="button">
+						Read More
+					</a>
+
+				</div>
+
+				<div class="col-sm">
+
+					<figure>
+						<img src="image/berempata.png" alt="friends">
+						<figcaption>
+							Photo by friends
+						</figcaption>
+					</figure>
+
+				</div>
+
+			</div>
+		</div>
+
+	</section>
+
+	<!-- PROJECT 3 -->
+
+	<section class="project blue">
+
+		<div class="container">
+			<div class="row">
+
+				<div class="col-sm">
+
+					<figure>
+						<img src="image/awaakuu.jpg" alt="friend">
+						<figcaption class="right-alignment">
+							Photo by me
+						</figcaption>
+					</figure>
+
+				</div>
+
+				<div class="col-sm">
+
+					<h2>
+						from school days <br>
+						to forever friend
+					</h2>
+
+					<p>
+						Persahabatan yang telah berjalan selama 14 tahun,
+						tumbuh bersama dalam setiap cerita dan perjalanan hidup.
+					</p>
+
+					<a href="detail3.html" class="button">
+						Read More
+					</a>
+
+				</div>
+
+			</div>
+		</div>
+
+	</section>
+
+	<!-- PROJECT 4 -->
+
+	<section class="project">
+
+		<div class="container">
+			<div class="row">
+
+				<div class="col-sm right-alignment">
+
+					<h2>
+						college friends <br>
+						and beautiful moments
+					</h2>
+
+					<p>
+						Teman-teman kuliah saya memiliki sifat yang beragam
+						dan menyenangkan.
+					</p>
+
+					<a href="detail4.html" class="button">
+						Read More
+					</a>
+
+				</div>
+
+				<div class="col-sm">
+
+					<figure>
+						<img src="image/sekelas.png" alt="class">
+						<figcaption>
+							Photo by friends
+						</figcaption>
+					</figure>
+
+				</div>
+
+			</div>
+		</div>
+
+	</section>
+
+	<footer id="contact">
+
+		<h2>
+			any questions? <br>
+			find me here
+		</h2>
+
+		<br>
+
+		<a href="https://mail.google.com/mail/u/1/#inbox">
+			[email protected]
+		</a>
+
+		<p>
+			Made with ❤️ — Salsabilla Audina 2026
+		</p>
+
+	</footer>
+
+</body>
+</html>

@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Four Friends</title>
+
+	<link rel="stylesheet" href="css/bootstrap-grid.css">
+	<link rel="stylesheet" href="css/styles.css">
+
+	<link href="https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@400;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+	margin:0;
+	padding:0;
+	box-sizing:border-box;
+}
+
+body{
+	background:linear-gradient(to bottom, #ffe0ef, #fff7fb);
+	font-family:'Poppins', sans-serif;
+	color:#444;
+}
+
+/* NAVBAR */
+
+nav{
+	padding:25px 60px;
+	background:rgba(255,255,255,0.4);
+	backdrop-filter:blur(12px);
+	position:sticky;
+	top:0;
+	z-index:1000;
+	box-shadow:0 4px 20px rgba(0,0,0,0.05);
+}
+
+nav ul{
+	list-style:none;
+	display:flex;
+	justify-content:center;
+	gap:40px;
+}
+
+nav ul li a{
+	text-decoration:none;
+	color:#444;
+	font-size:14px;
+	letter-spacing:2px;
+	text-transform:uppercase;
+	transition:0.3s;
+}
+
+nav ul li a:hover{
+	color:#ff4fa0;
+}
+
+/* CONTAINER */
+
+.container-detail{
+	max-width:1150px;
+	margin:60px auto;
+	background:white;
+	padding:70px;
+	border-radius:35px;
+	box-shadow:0 10px 40px rgba(0,0,0,0.08);
+}
+
+/* IMAGE */
+
+.image{
+	text-align:center;
+}
+
+.image img{
+	width:100%;
+	max-width:500px;
+	border-radius:30px;
+	box-shadow:0 10px 30px rgba(0,0,0,0.15);
+	transition:0.5s;
+}
+
+.image img:hover{
+	transform:scale(1.02);
+}
+
+/* TEXT */
+
+.text-content{
+	margin-top:50px;
+}
+
+h1{
+	font-family:'Inknut Antiqua', serif;
+	font-size:55px;
+	line-height:1.3;
+	text-align:center;
+	margin-bottom:35px;
+	color:#222;
+}
+
+h2{
+	font-family:'Inknut Antiqua', serif;
+	font-size:30px;
+	margin-top:50px;
+	margin-bottom:20px;
+	color:#ff4fa0;
+}
+
+p{
+	font-size:17px;
+	line-height:2;
+	margin-bottom:20px;
+	color:#666;
+}
+
+/* MEMORY BOX */
+
+.story-box{
+	background:#fff2f8;
+	padding:35px;
+	border-radius:25px;
+	margin-top:25px;
+}
+
+.story-box ul{
+	padding-left:20px;
+}
+
+.story-box li{
+	font-size:17px;
+	line-height:2;
+	margin-bottom:10px;
+	color:#555;
+}
+
+/* BUTTON */
+
+.button{
+	display:inline-block;
+	margin-top:40px;
+	padding:15px 38px;
+	background:#ff4fa0;
+	color:white;
+	text-decoration:none;
+	border-radius:50px;
+	font-size:14px;
+	letter-spacing:1px;
+	transition:0.4s;
+	box-shadow:0 5px 20px rgba(255,79,160,0.3);
+}
+
+.button:hover{
+	background:#222;
+	transform:translateY(-4px);
+}
+
+.button-box{
+	text-align:center;
+}
+
+/* FOOTER */
+
+footer{
+	text-align:center;
+	padding:45px;
+	background:#ffc8e2;
+	margin-top:50px;
+}
+
+footer p{
+	margin:0;
+	font-size:15px;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+
+	.container-detail{
+		padding:35px;
+		margin:20px;
+	}
+
+	h1{
+		font-size:35px;
+	}
+
+	h2{
+		font-size:24px;
+	}
+
+	p,
+	.story-box li{
+		font-size:15px;
+	}
+
+	nav ul{
+		flex-wrap:wrap;
+		gap:20px;
+	}
+
+}
+
+</style>
+</head>
+
+<body>
+
+	<nav>
+		<ul>
+			<li><a href="#contact">contact</a></li>
+			<li><a href="#">works</a></li>
+			<li><a href="#">experience</a></li>
+			<li><a href="index.html">home</a></li>
+			<li><a href="profil.html">profil</a></li>
+			<li><a href="https://www.instagram.com/povbysa.a/" target="_blank">instagram</a></li>
+			<li><a href="#">linkedin</a></li>
+		</ul>
+	</nav>
+
+	<div class="container-detail">
+
+		<div class="image">
+			<img src="image/berempata.png" alt="Friends">
+		</div>
+
+		<div class="text-content">
+
+			<h1>
+				four friends <br>
+				one long story
+			</h1>
+
+			<p>
+				Pertemanan ini dimulai sejak masa SMA dan terus tumbuh
+				hingga dunia perkuliahan. Kami belajar bersama, berbagi cerita,
+				dan saling mendukung dalam banyak hal.
+			</p>
+
+			<p>
+				Setiap dari kami memiliki sifat yang berbeda-beda,
+				namun justru perbedaan itu yang membuat hubungan kami
+				menjadi lebih berwarna dan penuh cerita.
+			</p>
+
+			<p>
+				Dalam suka maupun duka, kami selalu mencoba untuk tetap ada
+				satu sama lain. Kebersamaan sederhana seperti belajar bersama,
+				bercerita, dan menghabiskan waktu bersama menjadi kenangan
+				yang sangat berarti.
+			</p>
+
+			<h2>Our Beautiful Memories</h2>
+
+			<div class="story-box">
+
+				<ul>
+					<li>♡ Belajar dan mengerjakan tugas bersama</li>
+					<li>♡ Menghabiskan waktu setelah kelas selesai</li>
+					<li>♡ Saling mendukung saat menghadapi kesulitan</li>
+					<li>♡ Berbagi cerita, tawa, dan pengalaman baru</li>
+					<li>♡ Menjadi teman yang selalu ada satu sama lain</li>
+				</ul>
+
+			</div>
+
+			<p style="margin-top:35px;">
+				Bagi saya, pertemanan bukan hanya tentang kebersamaan,
+				tetapi tentang tetap saling mendukung dan tumbuh bersama
+				dalam setiap perjalanan hidup.
+			</p>
+
+			<div class="button-box">
+
+				<a href="index.html" class="button">
+					Back Home
+				</a>
+
+			</div>
+
+		</div>
+
+	</div>
+
+	<footer id="contact">
+		<p>Made with ❤️ — Salsabilla Audina 2026</p>
+	</footer>
+
+</body>
+</html>
